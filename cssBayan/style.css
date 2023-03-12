@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    color: blue;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+
+
+.container:hover *{
+    color: black;
+}
+
+
+.story {
+    display: flex;
+    flex-direction: column;
+    border: 0.1em solid black;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 1% 2%;
+    min-height: 3rem;
+}
+
+.story:hover .icon1{
+    transform: rotate(45deg);
+}
+
+.story:hover  .meme {
+    height: 20vh;
+}
+
+.container:hover .icon1 {
+    display: block;
+}
+
+.inputs {
+    appearance: none;
+    position: absolute;
+}
+
+.meme {
+    align-self: center;
+    transition: all 1s ease-in-out;
+    height: 0;
+    width: auto;
+}
+
+.inputs:checked ~ .meme {
+    height: 20vh;
+}
+.inputs:checked ~ p {
+    color: blue;
+}
+.inputs:checked ~ .label .icon1{
+    transform: rotate(45deg);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+    max-width: 90%;
+}
+
+.icon1 {
+    width: 3em;
+    display: none;
+}
+
+@media screen and (max-width:1180px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+}
