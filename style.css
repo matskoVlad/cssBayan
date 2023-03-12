@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    color: blue;
 }
 /* main {
     height: 300vh;
@@ -15,8 +16,10 @@
 
 }
 
-.container:hover {
-    color: blue;
+
+
+.container:hover *{
+    color: black;
 }
 
 
@@ -33,6 +36,7 @@
     border-bottom: 1px solid black;
     cursor: pointer;
     padding: 1% 2%;
+    min-height: 3rem;
 }
 
 .story:hover .icon1{
@@ -54,13 +58,16 @@
 
 .meme {
     align-self: center;
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
     height: 0;
     width: auto;
 }
 
 .inputs:checked ~ .meme {
     height: 20vh;
+}
+.inputs:checked ~ p {
+    color: blue;
 }
 .inputs:checked ~ .label .icon1{
     transform: rotate(45deg);
@@ -70,7 +77,32 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-size: 1em;
+}
+
 .icon1 {
-    width: 3%;
+    width: 3em;
     display: none;
+}
+
+@media screen and (max-width:1180px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
 }
