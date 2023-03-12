@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Montserrat'
+}
+/* main {
+    height: 300vh;
+} */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.container:hover {
+    color: blue;
+}
+
+
+.story {
+    display: flex;
+    flex-direction: column;
+    border: 0.1em solid black;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 1% 2%;
+}
+
+.story:hover .icon1{
+    transform: rotate(45deg);
+}
+
+.story:hover  .meme {
+    height: 20vh;
+}
+
+.container:hover .icon1 {
+    display: block;
+}
+
+.inputs {
+    appearance: none;
+    position: absolute;
+}
+
+.meme {
+    align-self: center;
+    transition: all 2s ease-in-out;
+    height: 0;
+    width: auto;
+}
+
+.inputs:checked ~ .meme {
+    height: 20vh;
+}
+.inputs:checked ~ .label .icon1{
+    transform: rotate(45deg);
+}
+
+h1 {
+    text-align: center;
+}
+
+.icon1 {
+    width: 3%;
+    display: none;
+}
