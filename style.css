@@ -79,6 +79,7 @@ h1 {
 
 p {
     font-size: 1em;
+    max-width: 90%;
 }
 
 .icon1 {
